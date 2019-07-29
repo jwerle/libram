@@ -1,6 +1,6 @@
 {
   "name": "ram",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "clib": true,
   "description": "A C99 library for creating random access memory interfaces.",
   "directories": {
