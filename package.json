@@ -1,6 +1,6 @@
 {
   "name": "@jwerle/libram",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "clib": true,
   "description": "A C99 library for creating random access memory interfaces.",
   "directories": {
