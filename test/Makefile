@@ -15,6 +15,7 @@ CFLAGS += -Werror
 CFLAGS += -I ../build/include
 CFLAGS += -I ../deps
 CFLAGS += -L $(BUILD_LIBRARY_PATH)
+CFLAGS += -l ram
 CFLAGS += -l m
 CFLAGS += -g
 
@@ -23,7 +24,7 @@ ifeq (Darwin, $(shell uname))
 endif
 
 ## test dependency source files
-DEPS += $(wildcard ../deps/*/*.c)
+DEPS += $(wildcard ../deps/ok/*.c)
 
 ## we need to set the LD_LIBRARY_PATH environment variable
 ## so our test executables can load the built library at runtim
@@ -43,7 +44,7 @@ all: $(TARGETS)
   done
 
 $(TARGETS): $(SOURCES)
-	$(CC) -o $@ $(wildcard ../src/*.c) $@.c $(DEPS) $(CFLAGS) -D OK_EXPECTED=`cat *.c|grep 'ok('|wc -l`
+	$(CC) -o $@ $@.c $(DEPS) $(CFLAGS) -D OK_EXPECTED=`cat *.c|grep 'ok('|wc -l`
 
 .PHONY: clean
 clean:

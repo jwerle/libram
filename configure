@@ -57,6 +57,7 @@ declare -a OPTIONAL_LIBRARY_DEPENDENCIES=()
 
 ## Source dependency files
 declare -a DEPS=(
+  deps/ras/*.c
 )
 
 ## Source files
