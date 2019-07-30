@@ -1,5 +1,5 @@
 {
-  "name": "ram",
+  "name": "@jwerle/libram",
   "version": "0.1.0",
   "clib": true,
   "description": "A C99 library for creating random access memory interfaces.",
@@ -7,20 +7,8 @@
     "example": "example",
     "test": "test"
   },
-  "repo": "jwerle/libram",
-  "src": [
-    "include/ram/platform.h",
-    "include/ram/version.h",
-    "include/ram/ram.h",
-    "src/ram.c",
-    "src/version.c",
-    "mk/brief.mk",
-    "Makefile.in",
-    "configure",
-    "README.md",
-    "LICENSE"
-  ],
   "scripts": {
+    "version": "./scripts/update-clib-json && git add clib.json",
     "test": "make test"
   },
   "repository": {
